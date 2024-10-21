@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="School Logo" class="logo">
+            <h1>Previous Feedback</h1>
+        </header>
+        <main>
+            <ul id="feedbackList"></ul>
+        </main>
+        <footer>
+            <p>&copy; 2024 School Improvement</p>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let feedbackList = JSON.parse(localStorage.getItem('feedback')) || [];
+            let listContainer = document.getElementById('feedbackList');
+            feedbackList.forEach(feedback => {
+                let listItem = document.createElement('li');
+                listItem.textContent = feedback;
+                listContainer.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Feedback & Suggestions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="School Logo" class="logo">
+            <h1>Feedback and Suggestions for School Improvement</h1>
+        </header>
+        <main>
+            <div class="form-section">
+                <h2>Submit Feedback</h2>
+                <textarea id="feedbackBox" placeholder="Enter your feedback..."></textarea>
+                <button onclick="submitFeedback()">Submit Feedback</button>
+            </div>
+            <div class="form-section">
+                <h2>Submit Suggestions</h2>
+                <textarea id="suggestionBox" placeholder="Enter your suggestion..."></textarea>
+                <button onclick="submitSuggestion()">Submit Suggestion</button>
+            </div>
+        </main>
+        <div class="buttons-section">
+            <button onclick="viewFeedback()">View Previous Feedback</button>
+            <button onclick="viewSuggestions()">View Previous Suggestions</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 School Improvement</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
